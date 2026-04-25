@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessica & Kelly</title>
+
+  <!-- Các thông tin khác cho Open Graph -->
+  <meta property="og:title" content="Jessica & Kelly" />
+  <meta property="og:description" content="16.01.2027" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+
+  <link rel="stylesheet" href="dist/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar-container">
+        <input type="checkbox" name="" id="nav-toggle" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#greeting">To Our Beloved Ones</a></li>
+          <li><a href="#couple">Looking Forward to Seeing You</a></li>
+          <li><a href="#dresscode">Dresscode</a></li>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#photos">What We Cherish</a></li>
+          <li><a href="#rsvp">Guest Confirmation</a></li>
+          <!-- <li><a href="#qrcode">Send a wedding gift</a></li> -->
+          <li><a href="#thankyou">Special Thank You</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- SECTION 1: COVER / ENVELOPE -->
+    <section id="cover" class="cover">
+      <img src="https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/tranganh-max/cover.png" alt="cover" class="fade-down">
+    </section>
+
+    <!-- SECTION 2: OPEN LETTER / GREETING -->
+    <section id="greeting" class="greeting">
+      <div class="content">
+        <h2 class="fade-down">To Our <br> Beloved Ones</h2>
+        <p class="fade-right">
+          Together with their families, <br>
+          Jessica & Kelly request the honour of your presence
+        </p>
+        <div class="signature fade-up">
+          <div class="wife-name">
+            Jessica
+          </div>
+          <div class="img-box">
+            <img src="assets/images/logo.png" alt="Logo couple" class="logo-couple">
+          </div>
+          <div class="husband-name">
+            Kelly
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COUPLE INTRO -->
+    <section id="couple" class="couple">
+      <h2 class="fade-up">Looking Forward <br> To Seeing You</h2>
+      <div class="couple-photo">
+        <img src="assets/images/couple/IMG_8787.webp" alt="Trang Anh & Max" class="flip-vertical-left" />
+      </div>
+      <div class="save-the-date">
+        <p class="fade-right">save the date</p>
+      </div>
+      <div class="subtext fade-down">
+        <p>
+          At their wedding celebration 🤎
+        </p>
+      </div>
+      <div class="date-time">
+        <p class="date fade-right">16.01.2027</p>
+        <p class="time fade-right">15:30 - Saturday</p>
+      </div>
+      <div class="countdown">
+        <div class="months item">
+          <p class="value months" id="months">00</p>
+          <p class="title">Months</p>
+        </div>
+        <div class="weeks item">
+          <p class="value weeks" id="weeks">00</p>
+          <p class="title">Weeks</p>
+        </div>
+        <div class="days item">
+          <p class="value days" id="days">00</p>
+          <p class="title">Days</p>
+        </div>
+        <div class="seconds item">
+          <p class="value seconds" id="seconds">00</p>
+          <p class="title">Seconds</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LOCATION -->
+    <section id="location" class="location">
+      <h2 class="location-name fade-up">An Lam Retreat</h2>
+      <p class="address fade-right"><strong>Reception Hall: Song Garden</strong> <br> 21/4 Trung Quarter, Binh Hoa Ward, Ho Chi Minh City</p>
+      <div class="map">
+        <img src="assets/images/map.png" alt="Bản đồ địa điểm cưới"/>
+      </div>
+      <a target="_blank" href="https://maps.app.goo.gl/NLvBNDnLMBV3fLU5A" class="btn-map fade-down">Maps</a>
+
+      <div class="timeline">
+        <div class="logo">
+          <img src="assets/images/logo-timeline.png" alt="Logo couple timeline" class="flip-vertical-left">
+        </div>
+        <p class="title fade-down">Timeline</p>
+        <div class="time-box time-box-en">
+          <div class="timeline-item first">
+            <div class="icon">
+              <img src="assets/images/icons/camera.webp" alt="">
+            </div>
+            <p class="description">15:30 - Welcome Reception</p>
+          </div>
+          <div class="timeline-item second">
+            <div class="icon">
+              <img src="assets/images/icons/rings.webp" alt="">
+            </div>
+            <p class="description">16:30 - Vows</p>
+          </div>
+          <div class="timeline-item third">
+            <div class="icon">
+              <img src="assets/images/icons/cup.webp" alt="">
+            </div>
+            <p class="description">16:40 - Cocktails hours</p>
+          </div>
+          <div class="timeline-item four">
+            <div class="icon">
+              <img src="assets/images/icons/mic.png" alt="">
+            </div>
+            <p class="description">18:00 - Reception</p>
+          </div>
+          <div class="timeline-item four">
+            <div class="icon">
+              <img src="assets/images/icons/party.webp" alt="">
+            </div>
+            <p class="description">19:00 - Games</p>
+          </div>
+          <div class="timeline-item five">
+            <div class="icon">
+              <img src="assets/images/icons/dance.png" alt="">
+            </div>
+            <p class="description">20:30 - Dance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dresscode" id="dresscode">
+      <div class="dress-top">
+        <h2 class="fade-up">Dresscode</h2>
+        <!-- <div  class="description fade-right">Chúng mình khuyến khích mọi người mặc trang phục lịch sự <br> và tránh mặc màu trắng và kem</div> -->
+      </div>
+      <div class="colors-grid">
+        <div class="item color-box">
+            <div class="color color1" style="background-color: #000000;"></div>
+            <div class="label">Black</div>
+        </div>
+        <div class="item color-box">
+            <div class="color color2" style="background-color: #A67C52;"></div>
+            <div class="label">Soft Brown</div>
+        </div>
+        <div class="item color-box">
+          <div class="color color3" style="background-color: #A8BBA3;"></div>
+          <div class="label">Sage Green</div>
+        </div>
+        <div class="item color-box">
+          <div class="color color4" style="background-color: #D8A7B1;"></div>
+          <div class="label">Crushed Rose</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: STORY / ABOUT -->
+    <section id="our-story" class="our-story">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="" class="flip-vertical-left">
+      </div>
+      <h2 class="fade-up">Our Story</h2>
+      <h3 class="fade-right">Jessica & Kelly</h3>
+      <p class="subtext fade-down">The Day We Tell </br> Our Story</p>
+      <div class="photo">
+        <img
+          src="assets/images/couple/IMG_8414.webp"
+          alt="" class="animate-flip">
+      </div>
+      <div class="text en">
+        <p class="fade-right">
+          From a quiet beginning to a certain forever
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PHOTOS -->
+    <section id="photos" class="photos">
+      <h2 class="fade-up">What We Cherish</h2>
+      <p class="fade-right">Your presence would be our greatest honour</p>
+      <div class="photo-grid">
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="assets/images/couple/IMG_8781.webp"
+                alt="" style="object-position: 50% 30%;">
+            </div>
+          </div>
+          <div class="column flip-vertical-left">
+            <div class="img-box">
+              <img loading="lazy" src="assets/images/couple/IMG_8777.webp"
+                alt="" style="object-position: 50% 100%;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="assets/images/couple/IMG_8782.webp"
+                alt="" style="object-position: 50% 45%;">
+            </div>
+          </div>
+          <div class="column flip-vertical-left">
+            <div class="img-box">
+              <img loading="lazy" src="assets/images/couple/IMG_8775.webp"
+                alt="" style="object-position: 50% 35%;">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="assets/images/couple/IMG_8412.webp"
+                alt="" style="object-position: 50% 50%;">
+            </div>
+          </div>
+          <div class="column flip-vertical-left">
+            <div class="img-box">
+              <img loading="lazy" src="assets/images/couple/IMG_8791.webp">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="img-box fade-down">
+              <img loading="lazy"
+                src="assets/images/couple/IMG_8776.webp"
+                alt="" style="object-position: 50% 32%;">
+            </div>
+          </div>
+          <div class="column flip-vertical-left">
+            <div class="img-box">
+              <img loading="lazy" src="assets/images/couple/IMG_8417.webp" style="object-position: 50% 0%;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: RSVP -->
+    <section id="rsvp" class="rsvp en">
+      <h2 class="title fade-up en">Guest Confirmation</h2>
+      <p class="subtext fade-up">
+        We happily welcome you on our special day.
+        If you are able to join us, please inform us by <strong>11.11.2026</strong>, so we can prepare everything for a memorable celebration.
+      </p>
+
+      <form id="rsvp-form-en">
+        <div class="form-group options-group fade-up">
+          <input type="radio" class="confirm" id="confirm-yes" value="yes" name="confirm" checked>
+          <label for="confirm-yes" class="radio-button confirm-yes">Will Attend</label>
+          <input type="radio" class="confirm" id="confirm-no" value="no" name="confirm">
+          <label for="confirm-no" class="radio-button confirm-no">Sorry,</br> I Can’t Attend</label>
+        </div>
+
+        <div class="form-group fade-up">
+          <input type="text" class="name input-text" id="name" name="name" placeholder="Guest Name" required>
+        </div>
+
+        <div class="form-group fade-up">
+          <input type="text" class="guest-number input-text" id="guest-number" name="guest_number"
+            placeholder="Number of Accompanying Guests (excluding yourself)">
+        </div>
+
+        <div class="wish-box en">
+          <h2 class="fade-up">A Little Message from </br> “Our Loved Ones”</h2>
+          <p class="fade-up">
+            Jessica & Kelly are always here to listen to your wishes and needs. If you have any questions or need support with anything at all, please don’t hesitate to let us know in detail so we can arrange everything thoughtfully for you!
+          </p>
+          <div class="form-group fade-up">
+            <textarea class="wish input-text" id="wish" name="wish" placeholder="Write a message:"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn fade-up">Confirm</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- <section class="qrcode" id="qrcode">
+      <div class="wax-box">
+        <img src="assets/images/qrcode_brown_5a3a21.png" id="qr-btn" class="flip-vertical-left" alt="">
+      </div>
+      <div class="subtext fade-up">
+        Send a wedding gift to the bride and groom!
+      </div>
+    </section> -->
+
+    <!-- SECTION 7: THANK YOU -->
+    <section id="thankyou" class="thankyou">
+      <h2 class="title fade-up">Special Thank You</h2>
+      <div class="photo">
+        <img
+          src="assets/images/couple/IMG_8788.webp"
+          alt="" class="animate-flip" style="object-position: 100% 20%;">
+      </div>
+      <div class="subtext">
+        <!-- <div class="divider">
+          <img src="assets/images/icons/divider.webp" alt="" class="fade-right">
+        </div> -->
+        <div class="text">
+          <p class="fade-right">
+            With love and appreciation.
+          </p>
+        </div>
+        <!-- <div class="divider">
+          <img src="assets/images/icons/divider.webp" alt="" class="fade-left">
+        </div> -->
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="assets/js/gsap-animations.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Mốc thời gian đích (ví dụ ngày cưới)
+    const targetDate = new Date("2027-01-16T15:30:00");
+
+    // Tính tháng, tuần, ngày thực tế (không tính giây)
+    function updateDateParts() {
+      const now = new Date();
+
+      if (now >= targetDate) {
+        document.getElementById("countdown").textContent = "Đã tới ngày đặc biệt!";
+        clearInterval(dateTimer);
+        clearInterval(secondTimer);
+        return;
+      }
+
+      let temp = new Date(now);
+      let months = 0;
+
+      // Tăng tháng bằng cách +1 từng tháng (KHÔNG overflow)
+      while (true) {
+        let next = new Date(temp);
+        next.setMonth(next.getMonth() + 1);
+
+        if (next > targetDate) break;
+
+        temp = next;
+        months++;
+      }
+
+      // Tính ms còn lại sau khi trừ tháng
+      let remainingMs = targetDate - temp;
+
+      let remainingDays = Math.floor(remainingMs / (1000 * 60 * 60 * 24));
+      let weeks = Math.floor(remainingDays / 7);
+      let days = remainingDays % 7;
+
+      document.getElementById("months").textContent = String(months).padStart(2, "0");
+      document.getElementById("weeks").textContent = String(weeks).padStart(2, "0");
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+    }
+
+    // === Bộ đếm giây chạy từ 59 → 0 lặp lại ===
+    let seconds = 59;
+    function updateSeconds() {
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+      seconds = seconds > 0 ? seconds - 1 : 59;
+    }
+
+    // Cập nhật ban đầu
+    updateDateParts();
+    updateSeconds();
+
+    // Chạy định kỳ
+    const dateTimer = setInterval(updateDateParts, 60 * 1000); // cập nhật ngày/tháng mỗi phút
+    const secondTimer = setInterval(updateSeconds, 1000); // giây chạy đều
+  </script>
+</body>
+
+</html>

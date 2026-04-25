@@ -1,0 +1,80 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.thankyou {
+    background: url('../../assets/images/our-story-bg.webp') no-repeat center/cover,
+                url('../../assets/images/base_bg.jpg') no-repeat bottom/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+
+    h2 {
+        font-size: 23px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin-bottom: 6%;
+    }
+
+    .photo {
+        max-width: 305px;
+        width: 100%;
+        aspect-ratio: 305 / 380;
+        // background-color: $secondary-color;
+        margin-bottom: 5%;
+        perspective: 1000px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .subtext {
+        padding: 0 18.7%;
+        .divider {
+            margin-bottom: 6%;
+            
+            img {
+                width: 26px;
+                height: auto;
+            }
+        }
+
+        .divider:last-child {
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
+        .text {
+            text-align: justify;
+            text-align-last: center;
+            font-size: 13px;
+            p {
+                padding-bottom: 6%;
+                line-height: 180%;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: calc((23px / 500px) * 100vw);
+        }
+    
+        .photo {
+            max-width: 61vw;
+        }
+
+        .subtext {
+            .divider {
+                img {
+                    width: 5.4vw;
+                }
+            }
+
+            .text {
+                font-size: calc((13px / 500px) * 100vw);
+            }
+        }
+    }
+}

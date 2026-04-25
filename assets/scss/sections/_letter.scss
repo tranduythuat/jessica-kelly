@@ -1,0 +1,111 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.letter-section {
+    width: 100%;
+    max-width: 500px;
+
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 890;
+        background: url('../../assets/images/our-story-bg.webp') no-repeat center/cover,
+        url('../../assets/images/base_bg.jpg') no-repeat bottom/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $secondary-color;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.439);
+        position: relative;
+        cursor: pointer;
+        perspective: 1000px;
+        font-family: $font-main;
+
+        .invitation {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: $primary-color;
+        }
+
+        .logo {
+            margin: 10% 0 10%;
+            width: 100%;
+            @include flex-center;
+            img {
+                max-width: 62px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .names {
+            margin-bottom: 4%;
+            font-size: 43px;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 15%;
+        }
+
+        // .divider {
+        //     margin:10% 0 9%;
+        //     img {
+        //         max-width: 45px;
+        //         width: 100%;
+        //         height: auto;
+        //     }
+        // }
+
+        .welcome {
+            font-size: 9.5px;
+            margin-bottom: 5%;
+            color: $primary-color;
+            text-align: center;
+        }
+
+        .open-card {
+            display: block;
+            @include flex-center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $primary-color;
+            background-color: transparent;
+            font-size: 9.5px;
+            border: 1px solid $primary-color;
+            border-radius: 15px;
+            margin: 0 auto;
+            padding: 1.5%;
+            line-height: 1;
+            width: 45%;
+            margin-top: 2%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .invitation {
+                font-size: calc((14 / 500) * 100vw);
+            }
+    
+            .logo {
+                img {
+                    max-width: calc((62 / 500) * 100vw);
+                }
+            }
+    
+            .names {
+                font-size: calc((43 / 500) * 100vw);
+            }
+    
+            // .divider {
+            //     img {
+            //         max-width: calc((45 / 500) * 100vw);
+            //     }
+            // }
+    
+            .welcome, .subtext, .open-card {
+                font-size: calc((9.5 / 500) * 100vw);
+            }
+        }
+    }
+}

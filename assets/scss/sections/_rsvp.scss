@@ -1,0 +1,193 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    background: url('../../assets/images/rsvp-bg.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+    justify-content: start;
+
+    &.en {
+        h2.title {
+            margin-top: 28%;
+        }
+    }
+
+    h2.title {
+        font-size: 21px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin-bottom: 2%;
+        margin-top: 26%;
+    }
+
+    p.subtext {
+        padding: 0 21%;
+        text-align: justify;
+        text-align-last: center;
+        line-height: 180%;
+    }
+
+    #rsvp-form{
+        width: 100%;
+        padding: 14% 20% 5%;
+    }
+
+    #rsvp-form-en {
+        width: 100%;
+        padding: 16% 20% 5%;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 3%;
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .radio-button {
+            @include flex-center;
+            font-size: 9px;
+            padding: 1% 0;
+            width: 138px;
+            border-radius: 6px;
+            border: 1px solid $secondary-color;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        input[type="radio"]:hover+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            transition: .3s ease;
+        }
+
+        input[type="radio"]:checked+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            border-color: $secondary-color;
+        }
+
+        input.input-text {
+            width: 100%;
+            padding: 2% 3%;
+            border-radius: 6px;
+            border: 1px solid $secondary-color;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            background-color: transparent;
+            font-size: 12px;
+            font-family: 'Lora', sans-serif;
+        }
+
+        input.input-text::placeholder {
+            font-size: .8em;
+        }
+
+        textarea.input-text {
+            font-size: 12px;
+            max-width: 311px;
+            width: 100%;
+            aspect-ratio: 311 / 83;
+            border-radius: 8px;
+            border: 1px solid $secondary-color;
+            background-color: transparent;
+            padding: 3% 4%;
+            box-sizing: border-box;
+            outline: none;
+            margin-bottom: 4%;
+            font-family: 'Lora', sans-serif;
+        }
+    }
+
+    .form-group.options-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wish-box {
+        text-align: center;
+
+        h2 {
+            font-size: 16.66px;
+            font-weight: 300;
+            color: $secondary-color;
+            margin-top: 16%;
+        }
+    
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding: 6% 3%;
+            line-height: 180%;
+        }
+
+        &.en {
+            h2 {
+                margin-top: 14%;
+            }
+            p {
+                padding: 3% 0 5%;
+            }
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        button.btn {
+            background-color: $secondary-color;
+            font-family: 'Lora', sans-serif;
+            border: none;
+            color: #fff;
+            padding: 3% 12%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 11px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        button.btn:hover {
+            color: #fff;
+            background-color: $primary-color;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2.title {
+            font-size: calc((21px / 500px) * 100vw);
+        }
+    
+        .form-group {
+            .radio-button {
+                font-size: calc((10 / 500) * 100vw);
+                width:  calc((138 / 500) * 100vw);
+            }
+
+            input.input-text {
+                font-size: calc((14 / 500) * 100vw);
+            }
+
+            textarea.input-text {
+                font-size: calc((12 / 500) * 100vw);
+            }
+        }
+
+        .wish-box {
+            h2 {
+                font-size: calc((16.66px / 500px) * 100vw);
+            }
+        }
+
+        .form-actions {
+            button.btn {
+                font-size: calc((11 / 500) * 100vw);
+            }
+        }
+    }
+}

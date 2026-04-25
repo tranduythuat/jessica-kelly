@@ -1,0 +1,86 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.photos {
+    background: url('../../assets/images/album_bg.jpg') no-repeat center / cover;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 7%;
+
+    h2 {
+        font-size: 23px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin-bottom: 5%;
+    }
+
+    p {
+        padding: 0 13%;
+        text-align: justify;
+        text-align-last: center;
+        margin-bottom: 5%;
+        line-height: 180%;
+        font-size: 13px;
+    }
+
+    .photo-grid {
+        width: 100%;
+        padding: 0 7% 7%;
+        .row {
+            display: flex;
+            max-width: 432px;
+            width: 100%;
+            aspect-ratio: 432 / 184;
+            perspective: 1000px;
+            .column {
+                margin: 1.1%;
+            }
+
+            .column:first-child {
+                width: 68%;
+                .img-box {
+                    width: 100%;
+                    height: 100%;
+                    // background-color: $secondary-color;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+            }
+
+            .column:last-child {
+                width: 32%;
+                .img-box {
+                    width: 100%;
+                    height: 100%;
+                    // background-color: $secondary-color;
+                    overflow: hidden;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        div:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: calc((23 / 500) * 100vw);
+        }
+
+        p {
+            font-size: calc((13 / 500) * 100vw);
+        }
+    }
+}

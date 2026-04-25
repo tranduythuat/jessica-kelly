@@ -1,0 +1,58 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.dresscode {
+    background: url('../../assets/images/base_bg.jpg') no-repeat center / cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 890;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 300;
+        color: $secondary-color;
+        margin-bottom: 5%;
+    }
+
+    .colors-grid {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        gap: 6%;
+        margin-top: 5%;
+
+        .item {
+            max-width: 40px;
+            width: 100%;
+
+            .color {
+                width: 100%;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                margin: auto;
+            }
+
+            .label {
+                text-align: center;
+                margin-top: 20%;
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: calc((32 / 500) * 100vw);
+        }
+
+        .colors-grid {
+            .item {
+                max-width: calc((40 / 500) * 100vw);
+                .label {
+                    font-size: calc((12 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

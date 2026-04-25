@@ -1,0 +1,14 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.cover {
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 891;
+    perspective: 1000px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
