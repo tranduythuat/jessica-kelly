@@ -440,10 +440,10 @@ header {
   margin-bottom: 6%;
 }
 .location .map {
-  max-width: 211px;
+  max-width: 230px;
   width: 100%;
-  aspect-ratio: 211/195;
-  margin-bottom: 8%;
+  height: auto;
+  margin-bottom: 0;
 }
 .location .map img {
   width: 100%;
@@ -531,7 +531,7 @@ header {
     font-size: 2.4vw;
   }
   .location .map {
-    max-width: 42.2vw;
+    max-width: 46vw;
   }
   .location .timeline .logo {
     max-width: 7.4vw;

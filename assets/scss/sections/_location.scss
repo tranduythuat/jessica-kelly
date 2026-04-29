@@ -21,10 +21,11 @@
     }
 
     .map {
-        max-width: 211px;
+        max-width: 230px;
         width: 100%;
-        aspect-ratio: 211 / 195;
-        margin-bottom: 8%;
+        height: auto;
+        // aspect-ratio: 211 / 195;
+        margin-bottom: 0;
         img {
             width: 100%;
             height: auto;
@@ -135,7 +136,7 @@
         }
     
         .map {
-            max-width: calc((211 / 500) * 100vw);
+            max-width: calc((230 / 500) * 100vw);
         }
     
         .timeline {
