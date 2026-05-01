@@ -276,9 +276,9 @@
             top: 14px;
             left: 14px;
             z-index: 10000;
-            border: 1px solid rgba(0,0,0,0.2);
+            border: 1px solid #5a3a21ff;
             background: rgba(255,255,255,0.92);
-            color: #202020;
+            color: #5a3a21ff;
             border-radius: 999px;
             padding: 8px 12px;
             font-size: 13px;
