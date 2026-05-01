@@ -429,7 +429,7 @@ header {
   background: url("../../assets/images/location_bg.png") no-repeat center/cover;
   max-width: 500px;
   width: 100%;
-  aspect-ratio: 500/984;
+  aspect-ratio: 500/1056;
 }
 .location .location-name {
   margin-top: 26%;
@@ -471,7 +471,7 @@ header {
   max-width: 37px;
   width: 100%;
   aspect-ratio: 37/58;
-  margin: 12% 0 5%;
+  margin: 7% 0 6%;
 }
 .location .timeline .logo img {
   width: 100%;
