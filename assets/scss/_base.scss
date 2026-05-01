@@ -45,7 +45,7 @@ section {
     opacity: 0.95;
     position: absolute;
     top: 0;
-    z-index: 100000;
+    z-index: 10000;
 }
 
 .navbar-container input[type="checkbox"],
@@ -123,6 +123,7 @@ section {
     right: calc(50% - 250px);
     top: 0;
     opacity: 0;
+    visibility: hidden;
 }
 
 .navbar .menu-items li {
@@ -146,6 +147,7 @@ section {
 .navbar-container input[type="checkbox"]:checked~.menu-items {
     transform: translateX(0);
     opacity: 1;
+    visibility: visible;
 }
 
 .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {

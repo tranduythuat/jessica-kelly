@@ -109,3 +109,51 @@
         }
     }
 }
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+    padding: 0 !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-html-container) {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.wedding-lang-popup {
+    border-radius: 18px !important;
+    border: 1px solid rgba(74, 111, 165, 0.2);
+    aspect-ratio: 3 / 1;
+
+    .btn-group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+
+    .lang-btn {
+        display: block;
+        width: 40%;
+        padding: 2% 5%;
+        font-family: $font-main;
+        font-size: 12px;
+        background: transparent;
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover {
+        background: $secondary-color;
+        color: #fff;
+    }
+
+    @media (max-width: 500px) {
+        .lang-btn {
+            font-size: calc((12 / 500) * 100vw);
+        }
+    }
+}

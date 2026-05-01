@@ -62,7 +62,7 @@ section {
   opacity: 0.95;
   position: absolute;
   top: 0;
-  z-index: 100000;
+  z-index: 10000;
 }
 
 .navbar-container input[type=checkbox],
@@ -139,6 +139,7 @@ section {
   right: calc(50% - 250px);
   top: 0;
   opacity: 0;
+  visibility: hidden;
 }
 
 .navbar .menu-items li {
@@ -162,6 +163,7 @@ section {
 .navbar-container input[type=checkbox]:checked ~ .menu-items {
   transform: translateX(0);
   opacity: 1;
+  visibility: visible;
 }
 
 .navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
@@ -1129,6 +1131,51 @@ div:where(.swal2-container) img:where(.swal2-image) {
   }
   .letter-section .content .welcome, .letter-section .content .subtext, .letter-section .content .open-card {
     font-size: 1.9vw;
+  }
+}
+
+div:where(.swal2-container) div:where(.swal2-popup) {
+  padding: 0 !important;
+}
+
+div:where(.swal2-container) div:where(.swal2-html-container) {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedding-lang-popup {
+  border-radius: 18px !important;
+  border: 1px solid rgba(74, 111, 165, 0.2);
+  aspect-ratio: 3/1;
+}
+.wedding-lang-popup .btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.wedding-lang-popup .lang-btn {
+  display: block;
+  width: 40%;
+  padding: 2% 5%;
+  font-family: "Lora", sans-serif;
+  font-size: 12px;
+  background: transparent;
+  border: 2px solid #5a3a21;
+  color: #5a3a21;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wedding-lang-popup .lang-btn:hover {
+  background: #5a3a21;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  .wedding-lang-popup .lang-btn {
+    font-size: 2.4vw;
   }
 }
 
