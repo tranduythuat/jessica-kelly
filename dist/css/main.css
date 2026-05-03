@@ -53,6 +53,14 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.309);
 }
 
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
 .protected {
   user-select: none;
   -webkit-user-drag: none;
