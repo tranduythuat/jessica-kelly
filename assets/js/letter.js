@@ -182,7 +182,7 @@
     };
     const langLabels = {
       vi: "Tiếng Việt",
-      en: "Tiếng Anh",
+      en: "English",
     };
 
     const getLangFromCurrentFile = () => {
@@ -247,7 +247,7 @@
             "beforeend",
             `
             <div class="btn-group">
-              <button id="btnEn" class="lang-btn">Tiếng Anh</button>
+              <button id="btnEn" class="lang-btn">English</button>
               <button id="btnVi" class="lang-btn">Tiếng Việt</button>
             </div>
             `
@@ -295,7 +295,7 @@
       button.id = "switch-language-btn";
       button.type = "button";
       const currentLang = getCurrentLanguage();
-      button.textContent = langLabels[currentLang] || "Tiếng Anh";
+      button.textContent = langLabels[currentLang] || "English";
       button.setAttribute("aria-label", "Switch language");
       button.addEventListener("click", openLanguageModal);
       document.body.appendChild(button);

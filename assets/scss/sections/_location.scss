@@ -16,7 +16,7 @@
     }
 
     .address {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 6%;
     }
 
@@ -40,6 +40,7 @@
         padding: 1% 8%;
         border-radius: 5px;
         margin-bottom: 8%;
+        font-size: 14px;
     }
 
     .timeline {
@@ -61,8 +62,8 @@
         }
 
         .title {
-            font-size: 16.38px;
-            color: #eeede8ff;
+            font-size: 18.38px;
+            color: #fff;
             margin-bottom: 5%;
         }
         .time-box {
@@ -96,8 +97,8 @@
 
                 .description {
                     // width: 85%;
-                    font-size: 12px;
-                    color: #eeede8ff;
+                    font-size: 14px;
+                    color: #fff;
                     text-align: left;
                 }
             }
@@ -105,7 +106,7 @@
             .timeline-item:nth-child(2) {
                 .icon {
                     img {
-                        max-width: 26px;
+                        max-width: 32px;
                     }
                 }
             }
@@ -113,14 +114,20 @@
             .timeline-item:nth-child(3) {
                 .icon {
                     img {
-                        max-width: 17px;
+                        max-width: 30px;
                     }
                 }
             }
             .timeline-item:nth-child(4) {
                 .icon {
                     img {
-                        max-width: 16px;
+                        max-width: 26px;
+                    }
+                }
+            } .timeline-item:nth-child(6) {
+                .icon {
+                    img {
+                        max-width: 26px;
                     }
                 }
             }
@@ -132,11 +139,15 @@
         }
     
         .address {
-            font-size: calc((12 / 500) * 100vw);
+            font-size: calc((14 / 500) * 100vw);
         }
     
         .map {
             max-width: calc((230 / 500) * 100vw);
+        }
+
+        .btn-map {
+            font-size: calc((14 / 500) * 100vw);
         }
     
         .timeline {
@@ -145,7 +156,7 @@
             }
     
             .title {
-                font-size: calc((16.83 / 500) * 100vw);
+                font-size: calc((18.83 / 500) * 100vw);
             }
             .time-box {
                 .timeline-item {
@@ -156,14 +167,14 @@
                     }
     
                     .description {
-                        font-size: calc((12 / 500) * 100vw);
+                        font-size: calc((14 / 500) * 100vw);
                     }
                 }
     
                 .timeline-item:nth-child(2) {
                     .icon {
                         img {
-                            max-width: calc((26 / 500) * 100vw);
+                            max-width: calc((32 / 500) * 100vw);
                         }
                     }
                 }
@@ -171,14 +182,21 @@
                 .timeline-item:nth-child(3) {
                     .icon {
                         img {
-                            max-width: calc((17 / 500) * 100vw);
+                            max-width: calc((30 / 500) * 100vw);
                         }
                     }
                 }
                 .timeline-item:nth-child(4) {
                     .icon {
                         img {
-                            max-width: calc((16 / 500) * 100vw);
+                            max-width: calc((26 / 500) * 100vw);
+                        }
+                    }
+                }
+                .timeline-item:nth-child(6) {
+                    .icon {
+                        img {
+                            max-width: calc((26 / 500) * 100vw);
                         }
                     }
                 }

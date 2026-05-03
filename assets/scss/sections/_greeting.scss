@@ -10,7 +10,7 @@
     .content {
         width: 100%;
         h2 {
-            font-size: 23px;
+            font-size: 25px;
             font-weight: 300;
             color: $secondary-color;
             padding-bottom: 10%;
@@ -35,7 +35,7 @@
                 margin: 0 8%;
                 width: 10%;
                 img.logo-couple {
-                    width: 35px;
+                    width: 37px;
                     height: auto;
                 }
             }
@@ -43,7 +43,7 @@
             
             .wife-name, .husband-name {
                 @include flex-center;
-                font-size: 20px;
+                font-size: 25px;
                 font-family: '1FTV-VIP-Bengoda', sans-serif;
                 font-weight: 300;
                 color: $secondary-color;
@@ -56,17 +56,17 @@
     @media (max-width: 500px) {
         .content {
             h2 {
-                font-size: calc((22px / 500px) * 100vw);
+                font-size: calc((25px / 500px) * 100vw);
             }
     
             .signature {
                 .wife-name, .husband-name {
-                    font-size: calc((23 / 500) * 100vw);
+                    font-size: calc((25 / 500) * 100vw);
                 }
 
                 .img-box {
                     img.logo-couple {
-                        width: calc((35 / 500) * 100vw);
+                        width: calc((37 / 500) * 100vw);
                     }
                 }
             }

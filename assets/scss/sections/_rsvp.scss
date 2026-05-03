@@ -10,16 +10,16 @@
 
     &.en {
         h2.title {
-            margin-top: 28%;
+            margin-top: 25%;
         }
     }
 
     h2.title {
-        font-size: 21px;
+        font-size: 23px;
         font-weight: 300;
         color: $secondary-color;
         margin-bottom: 2%;
-        margin-top: 26%;
+        margin-top: 23%;
     }
 
     p.subtext {
@@ -31,12 +31,12 @@
 
     #rsvp-form{
         width: 100%;
-        padding: 14% 20% 5%;
+        padding: 8% 20% 5%;
     }
 
     #rsvp-form-en {
         width: 100%;
-        padding: 16% 20% 5%;
+        padding: 11% 20% 5%;
     }
 
     .form-group {
@@ -48,7 +48,7 @@
         
         .radio-button {
             @include flex-center;
-            font-size: 9px;
+            font-size: 11px;
             padding: 1% 0;
             width: 138px;
             border-radius: 6px;
@@ -78,7 +78,7 @@
             box-sizing: border-box;
             outline: none;
             background-color: transparent;
-            font-size: 12px;
+            font-size: 14px;
             font-family: 'Lora', sans-serif;
         }
 
@@ -111,7 +111,7 @@
         text-align: center;
 
         h2 {
-            font-size: 16.66px;
+            font-size: 18.66px;
             font-weight: 300;
             color: $secondary-color;
             margin-top: 16%;
@@ -160,12 +160,12 @@
 
     @media (max-width: 500px) {
         h2.title {
-            font-size: calc((21px / 500px) * 100vw);
+            font-size: calc((23px / 500px) * 100vw);
         }
     
         .form-group {
             .radio-button {
-                font-size: calc((10 / 500) * 100vw);
+                font-size: calc((11 / 500) * 100vw);
                 width:  calc((138 / 500) * 100vw);
             }
 
@@ -180,7 +180,7 @@
 
         .wish-box {
             h2 {
-                font-size: calc((16.66px / 500px) * 100vw);
+                font-size: calc((18.66px / 500px) * 100vw);
             }
         }
 

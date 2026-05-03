@@ -8,7 +8,7 @@
     padding-top: 7%;
 
     h2 {
-        font-size: 23px;
+        font-size: 24px;
         font-weight: 300;
         color: $secondary-color;
         margin-bottom: 5%;
@@ -20,7 +20,7 @@
         text-align-last: center;
         margin-bottom: 5%;
         line-height: 180%;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .photo-grid {
@@ -76,11 +76,11 @@
 
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((23 / 500) * 100vw);
+            font-size: calc((24 / 500) * 100vw);
         }
 
         p {
-            font-size: calc((13 / 500) * 100vw);
+            font-size: calc((15 / 500) * 100vw);
         }
     }
 }

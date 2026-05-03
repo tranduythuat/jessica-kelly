@@ -9,7 +9,7 @@
     aspect-ratio: 500 / 890;
 
     h2 {
-        font-size: 23px;
+        font-size: 25px;
         font-weight: 300;
         color: $secondary-color;
         margin-bottom: 6%;
@@ -48,7 +48,7 @@
         .text {
             text-align: justify;
             text-align-last: center;
-            font-size: 13px;
+            font-size: 15px;
             p {
                 padding-bottom: 6%;
                 line-height: 180%;
@@ -58,7 +58,7 @@
 
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((23px / 500px) * 100vw);
+            font-size: calc((25px / 500px) * 100vw);
         }
     
         .photo {
@@ -73,7 +73,7 @@
             }
 
             .text {
-                font-size: calc((13px / 500px) * 100vw);
+                font-size: calc((15px / 500px) * 100vw);
             }
         }
     }

@@ -12,7 +12,7 @@
 body {
     font-family: $font-main;
     color: $primary-color;
-    font-size: 10px;
+    font-size: 12px;
     @include flex-center;
     overflow-x: hidden;
 }
@@ -164,7 +164,7 @@ section {
 
 @media (max-width: 500px) {
     body {
-        font-size: calc((10 / 500) * 100vw);
+        font-size: calc((12 / 500) * 100vw);
     }
     .navbar-container input[type="checkbox"] {
         top: 1.6%;

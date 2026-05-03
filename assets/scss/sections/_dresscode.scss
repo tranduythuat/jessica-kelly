@@ -8,7 +8,7 @@
     aspect-ratio: 500 / 890;
 
     h2 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 300;
         color: $secondary-color;
         margin-bottom: 5%;
@@ -36,21 +36,21 @@
             .label {
                 text-align: center;
                 margin-top: 20%;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
 
     @media (max-width: 500px) {
         h2 {
-            font-size: calc((32 / 500) * 100vw);
+            font-size: calc((34 / 500) * 100vw);
         }
 
         .colors-grid {
             .item {
                 max-width: calc((40 / 500) * 100vw);
                 .label {
-                    font-size: calc((12 / 500) * 100vw);
+                    font-size: calc((14 / 500) * 100vw);
                 }
             }
         }

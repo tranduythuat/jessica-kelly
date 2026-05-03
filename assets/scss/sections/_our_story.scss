@@ -9,7 +9,7 @@
     aspect-ratio: 500 / 890;
 
     .logo {
-        max-width: 45px;
+        max-width: 47px;
         width: 100%;
         margin-bottom: 4%;
         img {
@@ -18,19 +18,19 @@
         }
     }
     h2 {
-        font-size: 20px;
+        font-size: 22px;
         color: $secondary-color;
         font-weight: 300;
         margin-bottom: 5%;
     }
     h3 {
-        font-size: 34px;
+        font-size: 36px;
         color: $secondary-color;
         font-weight: 300;
     }
     p.subtext {
         color: $secondary-color;
-        font-size: 13px;
+        font-size: 15px;
     }
     .photo {
         max-width: 320px;
@@ -51,7 +51,7 @@
         text-align: justify;
         text-align-last: center;
         padding: 0 17%;
-        font-size: 12px;
+        font-size: 14px;
         &.en {
             padding: 0 15%;
         }
@@ -64,17 +64,17 @@
 
     @media (max-width: 500px) {
         .logo {
-            max-width: calc((45 / 500) * 100vw);
+            max-width: calc((47 / 500) * 100vw);
         }
         h2 {
-            font-size: calc((20 / 500) * 100vw);
+            font-size: calc((22 / 500) * 100vw);
         }
         h3 {
-            font-size: calc((34 / 500) * 100vw);
+            font-size: calc((36 / 500) * 100vw);
         }
         
         p.subtext {
-            font-size: calc((13px / 500px) * 100vw);
+            font-size: calc((15px / 500px) * 100vw);
         }
 
         .photo {
@@ -82,7 +82,7 @@
         }
 
         .text {
-            font-size: calc((12 / 500) * 100vw);
+            font-size: calc((14 / 500) * 100vw);
         }
     }
 }
