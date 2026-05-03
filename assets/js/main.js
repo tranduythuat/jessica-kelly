@@ -1,6 +1,8 @@
 // Kích hoạt ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
+const qs = (selector, parent = document) => parent.querySelector(selector);
+
 // Gọi các hiệu ứng có sẵn
 document.addEventListener("DOMContentLoaded", () => {
   gsapFlipIn(".animate-flip");
@@ -100,6 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // const qrcode = document.getElementById('qr-btn');
   // qrcode.addEventListener("click", toggleQR);
 
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());    
+  initMusic();
+
   const form = document.forms["rsvp-form"];
   const formEn = document.forms["rsvp-form-en"];
   if (form) {
@@ -109,7 +115,46 @@ document.addEventListener("DOMContentLoaded", () => {
   if (formEn) {
     formEn.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
   }
+
 });
+
+function initMusic() {
+  const audio = qs("#audio");
+  const icon = qs("#iconSvg");
+  const btn = qs("#player-btn");
+  const label = qs("#musicLabel");
+
+  let isOpen = true
+
+  if (!audio || !icon || !btn || !label) return;
+
+  // 👉 GSAP timeline cho label
+  const tl = gsap.timeline({ paused: true });
+
+  tl.to(label, {
+    x: 200,
+    // opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+     pointerEvents: "none"
+  });
+
+  btn.addEventListener("click", () => {
+    if (!audio.src) return;
+    audio.paused ? audio.play() : audio.pause();
+
+    // toggle label
+    if (isOpen) {
+      tl.play();
+    } else {
+      tl.reverse();
+    }
+    isOpen = !isOpen;
+  });
+
+  audio.addEventListener("play", () => icon.classList.add("spin"));
+  audio.addEventListener("pause", () => icon.classList.remove("spin"));
+}
 
 function toggleQR(e) {
   e.preventDefault();
@@ -192,7 +237,7 @@ async function handleFormSubmit(e, lang = "en") {
   });
 
 
-  const sheetURL = "?sheet=confirm";
+  const sheetURL = "https://script.google.com/macros/s/AKfycbz_tpimLbXOl5C19NdtT77-Exw6mekjDxBaSSV8ihs4PkPN6alngal8ona2rGNfuW6-Dw/exec?sheet=confirm";
 
   try {
     const res = await fetch(sheetURL, {

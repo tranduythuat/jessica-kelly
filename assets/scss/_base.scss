@@ -36,6 +36,11 @@ section {
     box-shadow: $shadow-default;
 }
 
+.protected {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
     display: none;
@@ -162,6 +167,64 @@ section {
     transform: rotate(-42deg);
 }
 
+
+/* music */
+.music-box {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 1%;
+    z-index: 10000;
+    cursor: pointer;
+    isolation: isolate;
+
+    .label {
+        @include flex-center;
+        position: relative;
+        transform-origin: right center;
+        position: absolute;
+        right: 30%;
+        z-index: 1;
+        max-width: 320px;
+        width: 200%;
+        height: 100%;
+        overflow: hidden;
+        
+        .musicLabel{
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            text-align: left;
+            font-size: 12px;
+            background-color: #fbf8f2;
+            padding: 4% 15%;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border: 1px solid #c0ad87;
+            opacity: .9;
+        }
+    }
+
+    &.en .label {
+        right: 52%;
+    }
+    .player {
+        max-width: 50px;
+        width: 100%;
+        aspect-ratio: 1;
+        z-index: 9999;
+        @include flex-center;
+        // border: 1px solid $secondary-color;
+        border-radius: 50%;
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        // background: rgb(114, 88, 43);
+        #iconSvg {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
 @media (max-width: 500px) {
     body {
         font-size: calc((12 / 500) * 100vw);
@@ -191,4 +254,30 @@ section {
         font-size: 2.9vw;
     }
 
+    .music-box {
+        bottom: calc((10 / 500) * 100vw);
+        .label {
+            max-width: calc((300 / 500) * 100vw);
+            .musicLabel {
+                font-size: calc((12 / 500) * 100vw);
+            }
+        }
+        .player {
+            max-width: calc((50 / 500) * 100vw);
+        }
+    }
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
