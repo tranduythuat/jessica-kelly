@@ -124,9 +124,9 @@ function initMusic() {
   const btn = qs("#player-btn");
   const label = qs("#musicLabel");
 
-  let isOpen = true
-
   if (!audio || !icon || !btn || !label) return;
+
+  let isOpen = true;
 
   // 👉 GSAP timeline cho label
   const tl = gsap.timeline({ paused: true });
@@ -139,17 +139,44 @@ function initMusic() {
      pointerEvents: "none"
   });
 
+  const closeMusicLabel = () => {
+    if (!isOpen) return;
+    tl.play();
+    isOpen = false;
+  };
+
+  const openMusicLabel = () => {
+    if (isOpen) return;
+    tl.reverse();
+    isOpen = true;
+  };
+
+  const playMusic = () => {
+    if (!audio.src) return Promise.reject(new Error("Audio source not found"));
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.then === "function") {
+      return playPromise.then(() => {
+        closeMusicLabel();
+      });
+    }
+
+    closeMusicLabel();
+    return Promise.resolve();
+  };
+
+  window.playWeddingMusic = playMusic;
+
   btn.addEventListener("click", () => {
     if (!audio.src) return;
-    audio.paused ? audio.play() : audio.pause();
-
-    // toggle label
-    if (isOpen) {
-      tl.play();
+    if (audio.paused) {
+      playMusic().catch((error) => {
+        console.warn("Cannot play music:", error);
+      });
     } else {
-      tl.reverse();
+      audio.pause();
+      openMusicLabel();
     }
-    isOpen = !isOpen;
   });
 
   audio.addEventListener("play", () => icon.classList.add("spin"));
@@ -290,4 +317,3 @@ async function handleFormSubmit(e, lang = "en") {
     });
   }
 }
-

@@ -176,6 +176,7 @@
     const currentFile = window.location.pathname.split("/").pop() || "";
 
     const STORAGE_KEY = "wedding_lang";
+    const MUSIC_PENDING_KEY = "wedding_music_after_lang";
     const langFiles = {
       vi: "thiepmoivi.html",
       en: "thiepmoien.html",
@@ -184,6 +185,7 @@
       vi: "Tiếng Việt",
       en: "English",
     };
+    let isFirstLanguageSelection = false;
 
     const getLangFromCurrentFile = () => {
       return Object.keys(langFiles).find((lang) => langFiles[lang] === currentFile) || "";
@@ -201,9 +203,46 @@
       return "";
     };
 
+    const requestMusicAfterLanguageSelection = (keepAfterNavigation = false) => {
+      if (keepAfterNavigation) {
+        try {
+          sessionStorage.setItem(MUSIC_PENDING_KEY, "1");
+        } catch (error) {
+          console.warn("Cannot save music preference:", error);
+        }
+      }
+
+      if (typeof window.playWeddingMusic === "function") {
+        window.playWeddingMusic().catch((error) => {
+          console.warn("Cannot play music after language selection:", error);
+        });
+      }
+    };
+
+    const playMusicIfRequested = () => {
+      let shouldPlay = false;
+
+      try {
+        shouldPlay = sessionStorage.getItem(MUSIC_PENDING_KEY) === "1";
+        if (shouldPlay) sessionStorage.removeItem(MUSIC_PENDING_KEY);
+      } catch (error) {
+        console.warn("Cannot read music preference:", error);
+      }
+
+      if (!shouldPlay || typeof window.playWeddingMusic !== "function") return;
+
+      window.playWeddingMusic().catch((error) => {
+        console.warn("Cannot autoplay music:", error);
+      });
+    };
+
     const goToLanguageFile = (lang) => {
       const fileName = langFiles[lang];
       if (!fileName) return;
+
+      if (isFirstLanguageSelection) {
+        requestMusicAfterLanguageSelection(currentFile !== fileName);
+      }
 
       try {
         localStorage.setItem(STORAGE_KEY, lang);
@@ -302,6 +341,7 @@
     };
 
     ensureLanguageButton();
+    playMusicIfRequested();
 
     let savedLang = "";
     try {
@@ -316,6 +356,7 @@
       }
       return;
     }
+    isFirstLanguageSelection = true;
     openLanguageModal();
   }
 
